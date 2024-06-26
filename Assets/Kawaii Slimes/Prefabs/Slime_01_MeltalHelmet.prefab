@@ -104,8 +104,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2821659471103554755}
-  - component: {fileID: -7765863969733992302}
-  - component: {fileID: 4815899973275658500}
+  - component: {fileID: 7572174850737276355}
+  - component: {fileID: 1713292855601203050}
+  - component: {fileID: 2502991334217078622}
   m_Layer: 0
   m_Name: Slime_01_MeltalHelmet
   m_TagString: Enemy
@@ -130,7 +131,7 @@ Transform:
   - {fileID: 7063375217746990126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-7765863969733992302
+--- !u!54 &7572174850737276355
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,9 +156,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!64 &4815899973275658500
+--- !u!64 &1713292855601203050
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,6 +180,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2659932603334005503, guid: 9981a4f80fb95b04fb9d36e07baa17cb, type: 3}
+--- !u!95 &2502991334217078622
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3198502390492704377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4223262636022095585
 GameObject:
   m_ObjectHideFlags: 0

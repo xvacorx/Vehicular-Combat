@@ -194,8 +194,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6836556466655795446}
-  - component: {fileID: 1414913965273484312}
-  - component: {fileID: -2573399106333644647}
+  - component: {fileID: 1607240640814008244}
+  - component: {fileID: 4376116301068293836}
+  - component: {fileID: 2827014762129645498}
   m_Layer: 0
   m_Name: Slime_03
   m_TagString: Enemy
@@ -220,7 +221,7 @@ Transform:
   - {fileID: 161877799810867857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1414913965273484312
+--- !u!54 &1607240640814008244
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,9 +246,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!64 &-2573399106333644647
+--- !u!64 &4376116301068293836
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,6 +270,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 9117543207126802746, guid: a2f1a2a97ec26bb47825031d7f3e94f3, type: 3}
+--- !u!95 &2827014762129645498
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173172085731050060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 707b944f06051734793367fc0c69bc07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6492255836270218599
 GameObject:
   m_ObjectHideFlags: 0
