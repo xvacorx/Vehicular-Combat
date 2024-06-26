@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour
     [SerializeField] Transform horizontalRotationTransform;
     [SerializeField] Transform verticalRotationTransform;
 
+    public bool objectiveAcquired = false;
     void Update()
     {
         GameObject closestEnemy = FindClosestEnemy();
@@ -24,7 +25,10 @@ public class Turret : MonoBehaviour
             Vector3 verticalDirection = horizontalRotationTransform.InverseTransformDirection(direction);
             float verticalAngle = Mathf.Atan2(verticalDirection.y, verticalDirection.z) * Mathf.Rad2Deg;
             verticalRotationTransform.localRotation = Quaternion.Euler(-verticalAngle, 0, 0); // Invertir el ángulo
+
+            objectiveAcquired = true;
         }
+        else { objectiveAcquired = false; }
     }
 
     GameObject FindClosestEnemy()

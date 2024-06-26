@@ -95,6 +95,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3900500950149963050}
   - component: {fileID: 8815123076498575289}
+  - component: {fileID: 1624633141835689736}
+  - component: {fileID: 7111274097447749975}
   - component: {fileID: 6467624981188659152}
   - component: {fileID: 4153216216024715842}
   m_Layer: 0
@@ -140,6 +142,36 @@ MonoBehaviour:
   steeringRange: 30
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -1
+--- !u!114 &1624633141835689736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579135228758434752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3701aac26fa36458b625956eb92513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hP: 100
+  damage: 1
+  attackSpeed: 1
+  playerAlive: 1
+--- !u!114 &7111274097447749975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579135228758434752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd91c7687d1fa843af5112936e3fc47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1627273087228656, guid: 6055b96f0ce59b24b8153d82a619824d, type: 3}
+  shootingPoint: {fileID: 7248606467367883996}
 --- !u!54 &6467624981188659152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -181,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalRotationTransform: {fileID: 31407592354664168}
   verticalRotationTransform: {fileID: 577832124220084284}
+  closestEnemy: {fileID: 0}
 --- !u!1 &6677430154563005942
 GameObject:
   m_ObjectHideFlags: 0

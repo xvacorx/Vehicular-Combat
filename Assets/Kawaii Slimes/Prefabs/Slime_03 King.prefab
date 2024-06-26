@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 2712171371153087995}
   - component: {fileID: 669817889048967386}
   - component: {fileID: 2938426296905666998}
+  - component: {fileID: -7068559454926165597}
   m_Layer: 0
   m_Name: Slime_03 King
   m_TagString: Enemy
@@ -157,8 +158,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1130853571538141387}
   - {fileID: 7853996678525006983}
@@ -235,6 +236,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7068559454926165597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4281683080859636826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68bf4009c5023a4a8f624369846848a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  damage: 0
+  speed: 2.5
+  player: {fileID: 0}
 --- !u!1 &6226777814166338176
 GameObject:
   m_ObjectHideFlags: 0
