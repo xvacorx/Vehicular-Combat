@@ -26,10 +26,10 @@ public class FollowerEnemy : Enemy
             transform.position += direction * speed * Time.deltaTime;
 
             Vector3 lookPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
-            transform.LookAt(lookPosition);
+            transform.LookAt(player.position);
         }
         else { isWalking = false; }
-        if (isWalking) { animator.SetFloat("Speed", 0.5f); }
+        if (isWalking) { animator.SetFloat("Speed", 1f); }
         else { animator.SetFloat("Speed", 0f); }
     }
 }

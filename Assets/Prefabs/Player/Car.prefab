@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalRotationTransform: {fileID: 31407592354664168}
   verticalRotationTransform: {fileID: 577832124220084284}
-  closestEnemy: {fileID: 0}
+  objectiveAcquired: 0
 --- !u!1 &6677430154563005942
 GameObject:
   m_ObjectHideFlags: 0
