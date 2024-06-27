@@ -14,7 +14,6 @@ public class ShooterEnemy : Enemy
     public float stopDistance = 15f;
     public float moveSpeed = 5f;
 
-    bool isWalking;
     Animator animator;
     private void Start()
     {
@@ -43,6 +42,19 @@ public class ShooterEnemy : Enemy
         }
         if (isWalking) { animator.SetFloat("Speed", 1f); }
         else { animator.SetFloat("Speed", 0f); }
+    }
+    public override void LoseLife(float hitDamage)
+    {
+        life -= hitDamage;
+        if (life <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        animator.SetTrigger("Damage");
+        Destroy(gameObject, 1f);
     }
 
     private void MoveTowardsPlayer()

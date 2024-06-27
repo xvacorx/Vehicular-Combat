@@ -19,14 +19,7 @@ public abstract class Enemy : MonoBehaviour
             LoseLife(playerDamage);
         }
     }
-    public void LoseLife(float hitDamage)
-    {
-        life -= hitDamage;
-        if (life <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    public abstract void LoseLife(float hitDamage);
     public void Despawn()
     {
         Destroy(gameObject);

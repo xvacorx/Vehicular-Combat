@@ -32,4 +32,17 @@ public class FollowerEnemy : Enemy
         if (isWalking) { animator.SetFloat("Speed", 1f); }
         else { animator.SetFloat("Speed", 0f); }
     }
+    public override void LoseLife(float hitDamage)
+    {
+        life -= hitDamage;
+        if (life <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        animator.SetTrigger("Damage");
+        Destroy(gameObject, 1f);
+    }
 }

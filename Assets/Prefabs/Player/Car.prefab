@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 7111274097447749975}
   - component: {fileID: 6467624981188659152}
   - component: {fileID: 4153216216024715842}
+  - component: {fileID: 533284950474734937}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hP: 100
   damage: 1
-  attackSpeed: 1
+  attackSpeed: 0.5
   playerAlive: 1
 --- !u!114 &7111274097447749975
 MonoBehaviour:
@@ -214,6 +215,27 @@ MonoBehaviour:
   horizontalRotationTransform: {fileID: 31407592354664168}
   verticalRotationTransform: {fileID: 577832124220084284}
   objectiveAcquired: 0
+--- !u!65 &533284950474734937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579135228758434752}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 1.5, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &6677430154563005942
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class Projectile : MonoBehaviour
         {
             if (!other.gameObject.CompareTag("Enemy") && !other.gameObject.CompareTag("EnemyProjectile") && !other.gameObject.CompareTag("PowerUp"))
             {
+                if(other.gameObject.TryGetComponent(out PlayerManager player)) { player.LoseHealth(5f); }
                 //GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //Destroy(explosion, 1f);
