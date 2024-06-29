@@ -10,8 +10,12 @@ public class FollowerEnemy : Enemy
     public Transform player;
 
     Animator animator;
+    Rigidbody rb;
+    MeshCollider collission;
     private void Start()
     {
+        collission = GetComponent<MeshCollider>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -42,6 +46,9 @@ public class FollowerEnemy : Enemy
     }
     public void Die()
     {
+        gameObject.tag = "Untagged";
+        collission.enabled = false;
+        rb.isKinematic = true;
         animator.SetTrigger("Damage");
         Destroy(gameObject, 1f);
     }

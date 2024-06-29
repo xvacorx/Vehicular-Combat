@@ -11,6 +11,7 @@ public abstract class Enemy : MonoBehaviour
 
     public  bool isWalking = false;
 
+    public bool alive = true;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerProjectile") && PlayerManager.Instance != null)

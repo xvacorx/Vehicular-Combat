@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    //[SerializeField] GameObject explosionEffect;
+    [SerializeField] GameObject explosionEffect;
     public float speed = 20f;
     public float lifeTime = 5f;
 
@@ -24,9 +24,9 @@ public class Projectile : MonoBehaviour
         {
             if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("EnemyProjectile") && !other.gameObject.CompareTag("PowerUp"))
             {
-                //GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                //Destroy(explosion, 1f);
+                Destroy(explosion, 1f);
             }
         }
         if (enemy)
@@ -34,9 +34,9 @@ public class Projectile : MonoBehaviour
             if (!other.gameObject.CompareTag("Enemy") && !other.gameObject.CompareTag("EnemyProjectile") && !other.gameObject.CompareTag("PowerUp"))
             {
                 if(other.gameObject.TryGetComponent(out PlayerManager player)) { player.LoseHealth(5f); }
-                //GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                GameObject explosion = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                //Destroy(explosion, 1f);
+                Destroy(explosion, 1f);
             }
         }
     }

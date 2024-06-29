@@ -15,8 +15,12 @@ public class ShooterEnemy : Enemy
     public float moveSpeed = 5f;
 
     Animator animator;
+    Rigidbody rb;
+    MeshCollider collission;
     private void Start()
     {
+        collission = GetComponent<MeshCollider>();
+        rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
         StartCoroutine(ShootRoutine());
@@ -53,6 +57,9 @@ public class ShooterEnemy : Enemy
     }
     public void Die()
     {
+        gameObject.tag = "Untagged";
+        collission.enabled = false;
+        rb.isKinematic = true;
         animator.SetTrigger("Damage");
         Destroy(gameObject, 1f);
     }
@@ -74,18 +81,15 @@ public class ShooterEnemy : Enemy
     {
         while (true)
         {
-            Debug.Log("Starting attack animation");
             animator.SetTrigger("Attack");
             yield return new WaitForSeconds(0.25f);
 
-            Debug.Log("Shooting");
             Shoot();
             yield return new WaitForSeconds(2.75f);
         }
     }
     private void Shoot()
     {
-        Debug.Log("Enemy Shoot");
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 }

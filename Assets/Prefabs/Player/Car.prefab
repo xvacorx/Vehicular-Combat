@@ -97,9 +97,10 @@ GameObject:
   - component: {fileID: 8815123076498575289}
   - component: {fileID: 1624633141835689736}
   - component: {fileID: 7111274097447749975}
-  - component: {fileID: 6467624981188659152}
   - component: {fileID: 4153216216024715842}
+  - component: {fileID: 6467624981188659152}
   - component: {fileID: 533284950474734937}
+  - component: {fileID: 1115159840675319321}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -118,7 +119,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9110883907878377699}
   - {fileID: 3025063829528491132}
@@ -157,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hP: 100
   damage: 1
-  attackSpeed: 0.5
+  attackSpeed: 1.5
   playerAlive: 1
 --- !u!114 &7111274097447749975
 MonoBehaviour:
@@ -173,6 +174,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1627273087228656, guid: 6055b96f0ce59b24b8153d82a619824d, type: 3}
   shootingPoint: {fileID: 7248606467367883996}
+--- !u!114 &4153216216024715842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579135228758434752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6938675f2d5334ba31e8584d38015d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalRotationTransform: {fileID: 31407592354664168}
+  verticalRotationTransform: {fileID: 577832124220084284}
+  objectiveAcquired: 0
 --- !u!54 &6467624981188659152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200,21 +216,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4153216216024715842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6579135228758434752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6938675f2d5334ba31e8584d38015d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalRotationTransform: {fileID: 31407592354664168}
-  verticalRotationTransform: {fileID: 577832124220084284}
-  objectiveAcquired: 0
 --- !u!65 &533284950474734937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -236,6 +237,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1.5, z: 3}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1115159840675319321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579135228758434752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042df9ae0c630e94293c29b67b45004d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactEffect: {fileID: 5339739117810204693, guid: 26e1cb216e3635e4a820f58a1118d6b9,
+    type: 3}
+  impactEffect2: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
+    type: 3}
+  damage: 2
+  cooldown: 5
+  force: 500
+  radius: 15
+  cooldownText: {fileID: 0}
 --- !u!1 &6677430154563005942
 GameObject:
   m_ObjectHideFlags: 0

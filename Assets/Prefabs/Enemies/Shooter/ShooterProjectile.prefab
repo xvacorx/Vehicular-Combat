@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3dd41bcfe568a744bd95ddf862090de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
+    type: 3}
   speed: 20
   lifeTime: 5
   enemy: 1

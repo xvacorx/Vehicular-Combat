@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
         damage = 1f;
         attackSpeed = 1f;
         playerAlive = true;
+        gameObject.SetActive(true);
     }
 
     public void LoseHealth(float value)
@@ -39,6 +40,7 @@ public class PlayerManager : MonoBehaviour
             hP = 0;
             Debug.Log("Death");
             playerAlive = false;
+            gameObject.SetActive(false);
         }
     } // Recive Damage
 

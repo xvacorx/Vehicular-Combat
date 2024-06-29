@@ -12,8 +12,12 @@ public class ExplodingEnemy : Enemy
     private bool isExploding = false;
     private GameObject explode;
 
+    Rigidbody rb;
+    MeshCollider collission;
     private void Start()
     {
+        collission = GetComponent<MeshCollider>();
+        rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         anim = GetComponent<Animator>();
     }
@@ -38,6 +42,9 @@ public class ExplodingEnemy : Enemy
 
     public void Die()
     {
+        gameObject.tag = "Untagged";
+        collission.enabled = false;
+        rb.isKinematic = true;
         if (!isExploding)
         {
             isExploding = true;
